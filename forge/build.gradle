@@ -133,13 +133,13 @@ dependencies {
 
     // EMI
     modCompileOnly("dev.emi:emi-forge:${fabric.versions.emi.get()}:api")
-    modImplementation forge.emi
+    modImplementation(forge.emi)
 
     // Jade
     modImplementation(forge.jade)
 
     // KJS
-    modImplementation forge.kubejs
+    modCompileOnly(forge.kubejs)
 
     // Mixin Extras
     implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:${this.forge.versions.mixinextras.get()}"))

@@ -28,36 +28,36 @@ repositories {
 dependencies {
     // We depend on fabric loader here to use the fabric @Environment annotations and get the mixin dependencies
     // Do NOT use other classes from fabric loader
-    modImplementation fabric.fabricLoader
-    modCompileOnly fabric.fabricApi
+    modImplementation(fabric.fabricLoader)
+    modCompileOnly(fabric.fabricApi)
 
-    modCompileOnly fabric.registrate
+    modCompileOnly(fabric.registrate)
 
     // JEI
-    modCompileOnly fabric.jei.common.api
-    modCompileOnly fabric.jei.fabric.api
-    modCompileOnly fabric.jei.fabric.impl
+    modCompileOnly(fabric.jei.common.api)
+    modCompileOnly(fabric.jei.fabric.api)
+    modCompileOnly(fabric.jei.fabric.impl)
 
     // REI
-    modCompileOnly fabric.rei.plugin
-    modCompileOnly fabric.rei.api
-    modCompileOnly fabric.rei.fabric
+    modCompileOnly(fabric.rei.plugin)
+    modCompileOnly(fabric.rei.api)
+    modCompileOnly(fabric.rei.fabric)
 
     // EMI
     modCompileOnly("dev.emi:emi-fabric:${fabric.versions.emi.get()}:api")
-    modCompileOnly fabric.emi
+    modCompileOnly(fabric.emi)
 
     // Jade
-    modCompileOnly fabric.jade
+    modCompileOnly(fabric.jade)
 
     // KJS
-    modCompileOnly fabric.kubejs
+    modCompileOnly(fabric.kubejs)
 
     // Mixin Extras
     implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:${fabric.versions.mixinextras.get()}"))
 
     // Configuration
-    modCompileOnly fabric.configuration
+    modCompileOnly(fabric.configuration)
 }
 
 publishing {

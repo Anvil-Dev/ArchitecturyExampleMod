@@ -83,8 +83,8 @@ repositories {
 }
 
 dependencies {
-    modImplementation fabric.fabricLoader
-    modImplementation fabric.fabricApi
+    modImplementation(fabric.fabricLoader)
+    modImplementation(fabric.fabricApi)
 
     common(project(path: ":${mod_id}-common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":${mod_id}-common", configuration: "transformProductionFabric")) { transitive false }
@@ -93,8 +93,8 @@ dependencies {
     modImplementation(include("com.tterrag.registrate_fabric:Registrate:${fabric.versions.registrate.get()}"))
 
     // Development QOL
-    modCompileOnly fabric.lazydfu
-    modCompileOnly fabric.modmenu
+    modCompileOnly(fabric.lazydfu)
+    modCompileOnly(fabric.modmenu)
 
     // JEI
     modCompileOnlyApi(fabric.jei.common.api) { transitive = false }
@@ -108,13 +108,13 @@ dependencies {
 
     // EMI
     modCompileOnly("dev.emi:emi-fabric:${fabric.versions.emi.get()}:api")
-    modImplementation fabric.emi
+    modImplementation(fabric.emi)
 
     // Jade
-    modImplementation fabric.jade
+    modImplementation(fabric.jade)
 
     // KJS
-    modImplementation fabric.kubejs
+    modCompileOnly(fabric.kubejs)
 
     // Mixin Extras
     include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:${fabric.versions.mixinextras.get()}")))
