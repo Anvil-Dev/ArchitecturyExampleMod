@@ -14,10 +14,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.example.examplemod.fabric.AnvilCraftFabric"
+      "com.example.examplemod.fabric.ExampleModFabric"
     ],
     "fabric-datagen": [
-      "com.example.examplemod.data.fabric.AnvilCraftDatagen"
+      "com.example.examplemod.data.fabric.ExampleModDatagen"
     ]
   },
   "mixins": [
